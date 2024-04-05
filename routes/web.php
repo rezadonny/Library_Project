@@ -17,4 +17,4 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('/home',[AdminController::class,'index']);   link untuk mengarahkan ke halaman berdasarkan controller AdminController
+Route::get('/home',[AdminController::class,'index']);   /* link untuk mengarahkan ke halaman berdasarkan controller AdminController */
