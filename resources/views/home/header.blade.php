@@ -31,16 +31,18 @@
                           <li><a href="create.html">Create Yours</a></li>
 
                           @if (Route::has('login'))
-                              <nav class="-mx-3 flex flex-1 justify-end">
-                                  @auth
-                                      <li><a href="{{ route('login') }}">Logout</a></li>
-                                  @else
-                                      <li><a href="{{ route('login') }}">Login</a></li>
-                                      @if (Route::has('register'))
-                                          <li><a href="{{ route('register') }}">Register</a></li>
-                                      @endif
-                                  @endauth
-                              </nav>
+                              {{-- <nav class="-mx-3 flex flex-1 justify-end"> --}}
+                              @auth
+                                  {{-- <li><a href="{{ route('login') }}">Logout</a></li> --}}
+                                  <x-app-layout>
+                                  </x-app-layout>
+                              @else
+                                  <li><a href="{{ route('login') }}">Login</a></li>
+                                  @if (Route::has('register'))
+                                      <li><a href="{{ route('register') }}">Register</a></li>
+                                  @endif
+                              @endauth
+                              {{--                               </nav> --}}
                           @endif
 
                           {{-- <li><a href="{{ route('login') }}">Login</a></li>
