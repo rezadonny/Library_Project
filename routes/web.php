@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
     return view('home.index'); /*menampilkan halaman utama /home/index.blade.php 
 }); */
 
-Route::get('/',[HomeController::class,'index']);
+Route::get('/', [HomeController::class, 'index']);
 
 Route::middleware([
     'auth:sanctum',
@@ -24,4 +24,4 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('/home',[AdminController::class,'index']);   /* link untuk mengarahkan ke halaman berdasarkan controller AdminController */
+Route::get('/home', [AdminController::class, 'index']);   /* link untuk mengarahkan ke halaman berdasarkan controller AdminController */

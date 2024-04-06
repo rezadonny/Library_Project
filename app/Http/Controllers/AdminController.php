@@ -15,8 +15,10 @@ class AdminController extends Controller
 
             if ($user_type == 'admin') {
                 return view('admin.index');
+
             } else if ($user_type == 'user') {
                 return view('home.index');
+                
             } else {
                 return redirect()->back(); 
             }
