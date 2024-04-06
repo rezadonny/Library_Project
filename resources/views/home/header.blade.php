@@ -29,7 +29,8 @@
                         <li><a href="details.html">Item Details</a></li>
                         <li><a href="author.html">Author</a></li>
                         <li><a href="create.html">Create Yours</a></li>
-                        <li><a href="create.html">Login</a></li>
+                        <li><a href="{{ route('login') }}">Login</a></li>
+                        <li><a href="{{ route('register') }}">Register</a></li>
                     </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
