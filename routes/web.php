@@ -25,3 +25,8 @@ Route::middleware([
 });
 
 Route::get('/home', [AdminController::class, 'index']);   /* link untuk mengarahkan ke halaman berdasarkan controller AdminController */
+
+
+
+
+Route::get('/category_page', [AdminController::class, 'category_page']);
