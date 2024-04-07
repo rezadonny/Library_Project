@@ -33,8 +33,10 @@ class AdminController extends Controller
     {
         $data = new Category;                   /* memanggil tabel Category dari DB project */
         $data->cat_title = $request->category;  /* memasukan data dari input category ke dalam field cat_title */
-        $data->save();                          /* menyimpan data pada tabel */
+        $data->save();                          /* menyimpan data pada tabel dBase*/
 
-        return redirect()->back();              /* kembali ke halaman awal atau seperti tetap di halaman tersebut */
+        /* return redirect()->back(); */              /* kembali ke halaman awal atau seperti tetap di halaman tersebut */
+
+        return redirect()->back()->with('message', 'Category Added Successfully'); /* menampilkan pesan input berhasil */
     }
 }

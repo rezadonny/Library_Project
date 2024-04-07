@@ -18,9 +18,25 @@
             <div class="page-header">
                 <div class="container-fluid">
                     <div>
+                        
+                        {{-- Bagian untuk menampilkan pesan input berhasil -Start --}}
+                        <div>
+                            @if (session()->has('message'))
+                                <div class="alert alert-success">
+                                    {{ session()->get('message') }}
+                                    <button type='button' class="close" data-dismiss='alert' aria-hidden="true">
+                                        x
+                                    </button>
+                                </div>
+                            @endif
+                        </div>
+                        {{-- Bagian untuk menampilkan pesan input berhasil -End --}}
+
+
                         <h1>Add Category</h1>
 
-                        <form class="text-center" action="{{ url('add_category') }}" method="post"> {{-- add_category adalah fungsi post pada controller admin --}}
+                        <form class="text-center" action="{{ url('add_category') }}" method="post">
+                            {{-- add_category adalah fungsi post pada controller admin --}}
 
                             @csrf {{-- untuk melindungi web dari serangan penetrasi celah keamanan web --}}
 
