@@ -198,9 +198,16 @@
                             class="dropdown-item"> <img src="img/flags/16/FR.png" alt="English"
                                 class="mr-2"><span>French </span></a></div>
                 </div>
+
                 <!-- Log out               -->
-                <div class="list-inline-item logout"> <a id="logout" href="login.html"
-                        class="nav-link">Logout <i class="icon-logout"></i></a></div>
+                <div class="list-inline-item logout"> 
+
+                    {{-- <a id="logout" href="login.html" class="nav-link">Logout<i class="icon-logout"></i></a> --}}
+                    
+                    <x-app-layout>
+                    </x-app-layout>
+                    
+                </div>
             </div>
         </div>
     </nav>
