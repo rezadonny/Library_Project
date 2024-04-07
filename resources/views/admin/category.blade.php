@@ -1,15 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Category</title>
+    @include('admin.css')
 </head>
 
 <body>
-    Category
+    @include('admin.header')
+    <div class="d-flex align-items-stretch">
+        <!-- Sidebar Navigation-->
+        @include('admin.sidebar')
+        <!-- Sidebar Navigation end-->
+
+        {{-- @include('admin.body') --}}
+
+<div class="page-content">
+    <div class="page-header">
+        <div class="container-fluid">
+        Category
+        </div>
+    </div>
+</div>
+
+
+        @include('admin.footer')
 </body>
 
 </html>
