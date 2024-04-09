@@ -26,7 +26,10 @@ class AdminController extends Controller
 
     public function category_page()
     {
-        return view('admin.category');
+        $data = Category::all(); /* Memanggil semua variabel data dari tabel Category ke dalam variabel $data */
+        return view('admin.category', compact('data')); /* Menampilkan data tabel Category */
+
+       /*  return view('admin.category'); /* menampilkan halaman view Category */
     }
 
     public function add_category(Request $request)

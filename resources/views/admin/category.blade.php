@@ -18,7 +18,7 @@
             <div class="page-header">
                 <div class="container-fluid">
                     <div>
-                        
+
                         {{-- Bagian untuk menampilkan pesan input berhasil -Start --}}
                         <div>
                             @if (session()->has('message'))
@@ -32,7 +32,7 @@
                         </div>
                         {{-- Bagian untuk menampilkan pesan input berhasil -End --}}
 
-
+                        {{-- Bagian untuk menampilkan form input -Start --}}
                         <h1>Add Category</h1>
 
                         <form class="text-center" action="{{ url('add_category') }}" method="post">
@@ -49,6 +49,35 @@
 
                             <button class="btn btn-primary text-center" type="submit">Add Category</button>
                         </form>
+                        {{-- Bagian untuk menampilkan form input Eend --}}
+
+                        {{-- Bagian untuk menampilkan data tabel -Start --}}
+
+                        <div class="table-responsive"
+                            style="margin: 25px;padding: 5px;border-width: 2px;border-style: solid;margin-right: 0;margin-left: 0;">
+                            <table class="table table-striped table-hover table-bordered">
+                                <thead class="table-light text-center" style="border: 2px solid var(--bs-table-color);">
+                                    <tr class="table-primary" style="border: 2px solid var(--bs-table-color);">
+                                        <th>No</th>
+                                        <th>Category Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider" style="border: 2px solid var(--bs-table-color);">
+                                    
+                                    {{-- Fungsi untuk menampilkan semua data tabel -Start --}}
+                                    @foreach ($data as $data)
+                                        <tr style="border: 2px solid var(--bs-table-color);">
+                                            <td>{{ $data -> id }}</td>
+                                            <td>{{ $data -> cat_title }}</td>
+                                        </tr>
+                                    @endforeach
+                                    {{-- Fungsi untuk menampilkan semua data tabel -End --}}
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        {{-- Bagian untuk menampilkan data tabel -End --}}
 
                     </div>
                 </div>
