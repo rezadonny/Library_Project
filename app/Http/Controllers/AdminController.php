@@ -29,7 +29,7 @@ class AdminController extends Controller
         $data = Category::all(); /* Memanggil semua variabel data dari tabel Category ke dalam variabel $data */
         return view('admin.category', compact('data')); /* Menampilkan data tabel Category */
 
-       /*  return view('admin.category'); /* menampilkan halaman view Category */
+        /*  return view('admin.category'); /* menampilkan halaman view Category */
     }
 
     public function add_category(Request $request)
@@ -41,5 +41,12 @@ class AdminController extends Controller
         /* return redirect()->back(); */              /* kembali ke halaman awal atau seperti tetap di halaman tersebut */
 
         return redirect()->back()->with('message', 'Category Added Successfully'); /* menampilkan pesan input berhasil */
+    }
+
+    public function cat_delete($id)
+    {
+        $data = Category::find($id);
+        $data->delete();
+        return redirect()->back()->with('message', 'Category Deleted Successfully'); /* menampilkan pesan input berhasil */
     }
 }

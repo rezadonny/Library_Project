@@ -60,15 +60,20 @@
                                     <tr class="table-primary" style="border: 2px solid var(--bs-table-color);">
                                         <th>No</th>
                                         <th>Category Name</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody class="table-group-divider" style="border: 2px solid var(--bs-table-color);">
-                                    
+
                                     {{-- Fungsi untuk menampilkan semua data tabel -Start --}}
                                     @foreach ($data as $data)
                                         <tr style="border: 2px solid var(--bs-table-color);">
-                                            <td>{{ $data -> id }}</td>
-                                            <td>{{ $data -> cat_title }}</td>
+                                            <td>{{ $data->id }}</td>
+                                            <td>{{ $data->cat_title }}</td>
+                                            <td>
+                                                <a class="btn btn-danger"
+                                                    href="{{ url('cat_delete', $data->id) }}">Delete</a>
+                                            </td>
                                         </tr>
                                     @endforeach
                                     {{-- Fungsi untuk menampilkan semua data tabel -End --}}
