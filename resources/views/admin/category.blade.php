@@ -68,7 +68,7 @@
                                     {{-- Fungsi untuk menampilkan semua data tabel -Start --}}
                                     @foreach ($data as $data)
                                         <tr style="border: 2px solid var(--bs-table-color);">
-                                            <td>{{ $data->id }}</td>
+                                            <td>{{ $loop->iteration }}</td>
                                             <td>{{ $data->cat_title }}</td>
                                             <td>
                                                 <a class="btn btn-danger"
